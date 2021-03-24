@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import Carousel from "./Component/Carousel";
 import './App.css';
+import './Custom.scss';
+
+import './fonts/GalanoGrotesqueRegular.ttf';
+import './fonts/GalanoGrotesqueMedium.ttf';
+import IceCream from "./Component/IceCream";
+import StoreName from "./Component/StoreName";
+
+import logo from './img/logo.svg';
+import FooterPre from "./Component/FooterPre";
+import Footer from "./Component/Footer";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="headerMain">
+        <div className="container">
+            <div className="headerInner">
+                <div className="logoSection">
+                    <h4>Store made with</h4>
+                    <img src={logo}/>
+                </div>
+                <a href="#">DOWNLOAD APP</a>
+            </div>
+        </div>
       </header>
+        <StoreName/>
+        <Carousel/>
+        <IceCream/>
+        <FooterPre/>
+        <Footer/>
     </div>
   );
 }
